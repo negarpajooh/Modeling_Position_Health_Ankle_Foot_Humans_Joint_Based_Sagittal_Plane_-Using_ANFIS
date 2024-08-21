@@ -1,0 +1,274 @@
+clc;
+clear;
+close all;
+%% load
+shoe1=xlsread('shoe1.xlsx');
+shoe2=xlsread('shoe2.xlsx');
+shoe3=xlsread('shoe3.xlsx');
+brace1=xlsread('brace1.xlsx');
+brace2=xlsread('brace2.xlsx');
+brace3=xlsread('brace3.xlsx');
+modification1=xlsread('modification1.xlsx');
+modification2=xlsread('modification2.xlsx');
+modification3=xlsread('modification3.xlsx');
+%% Ankle
+x_Ankle.brace1=brace1
+y_Ankle.brace1=brace1
+z_Ankle.brace1=brace1
+x_Ankle.brace2=brace2
+y_Ankle.brace2=brace2
+z_Ankle.brace2=brace2
+x_Ankle.brace3=brace3
+y_Ankle.brace3=brace3
+z_Ankle.brace3=brace3
+%
+x_Ankle.shoe1=shoe1
+y_Ankle.shoe1=shoe1
+z_Ankle.shoe1=shoe1
+x_Ankle.shoe2=shoe2
+y_Ankle.shoe2=shoe2
+z_Ankle.shoe2=shoe2
+x_Ankle.shoe3=shoe3
+y_Ankle.shoe3=shoe3
+z_Ankle.shoe3=shoe3
+%
+x_Ankle.modification1=modification1
+y_Ankle.modification1=modification1
+z_Ankle.modification1=modification1
+x_Ankle.modification2=modification2
+y_Ankle.modification2=modification2
+z_Ankle.modification2=modification2
+x_Ankle.modification3=modification3
+y_Ankle.modification3=modification3
+z_Ankle.modification3=modification3
+%% Toe
+x_Toe.brace1=brace1
+y_Toe.brace1=brace1
+z_Toe.brace1=brace1
+x_Toe.brace2=brace2
+y_Toe.brace2=brace2
+z_Toe.brace2=brace2
+x_Toe.brace3=brace3
+y_Toe.brace3=brace3
+z_Toe.brace3=brace3
+%
+x_Toe.shoe1=shoe1
+y_Toe.shoe1=shoe1
+z_Toe.shoe1=shoe1
+x_Toe.shoe2=shoe2
+y_Toe.shoe2=shoe2
+z_Toe.shoe2=shoe2
+x_Toe.shoe3=shoe3
+y_Toe.shoe3=shoe3
+z_Toe.shoe3=shoe3
+x_Toe.modification1=modification1
+y_Toe.modification1=modification1
+z_Toe.modification1=modification1
+x_Toe.modification2=modification2
+y_Toe.modification2=modification2
+z_Toe.modification2=modification2
+x_Toe.modification3=modification3
+y_Toe.modification3=modification3
+z_Toe.modification3=modification3
+%% MET5
+x_MET5.brace1=brace1
+y_MET5.brace1=brace1
+z_MET5.brace1=brace1
+x_MET5.brace2=brace2
+y_MET5.brace2=brace2
+z_MET5.brace2=brace2
+x_MET5.brace3=brace3
+y_MET5.brace3=brace3
+z_MET5.brace3=brace3
+%
+x_MET5.shoe1=shoe1
+y_MET5.shoe1=shoe1
+z_MET5.shoe1=shoe1
+x_MET5.shoe2=shoe2
+y_MET5.shoe2=shoe2
+z_MET5.shoe2=shoe2
+x_MET5.shoe3=shoe3
+y_MET5.shoe3=shoe3
+z_MET5.shoe3=shoe3
+%
+x_MET5.modification1=modification1
+y_MET5.modification1=modification1
+z_MET5.modification1=modification1
+x_MET5.modification2=modification2
+y_MET5.modification2=modification2
+z_MET5.modification2=modification2
+x_MET5.modification3=modification3
+y_MET5.modification3=modification3
+z_MET5.modification3=modification3
+%% feo
+x_feo.brace1=brace1
+y_feo.brace1=brace1
+z_feo.brace1=brace1
+x_feo.brace2=brace2
+y_feo.brace2=brace2
+z_feo.brace2=brace2
+x_feo.brace3=brace3
+y_feo.brace3=brace3
+z_feo.brace3=brace3
+%
+x_feo.shoe1=shoe1
+y_feo.shoe1=shoe1
+z_feo.shoe1=shoe1
+x_feo.shoe2=shoe2
+y_feo.shoe2=shoe2
+z_feo.shoe2=shoe2
+x_feo.shoe3=shoe3
+y_feo.shoe3=shoe3
+z_feo.shoe3=shoe3
+%
+x_feo.modification1=modification1
+y_feo.modification1=modification1
+z_feo.modification1=modification1
+x_feo.modification2=modification2
+y_feo.modification2=modification2
+z_feo.modification2=modification2
+x_feo.modification3=modification3
+y_feo.modification3=modification3
+z_feo.modification3=modification3
+%% Knee
+x_Knee.brace1=brace1
+y_Knee.brace1=brace1
+z_Knee.brace1=brace1
+x_Knee.brace2=brace2
+y_Knee.brace2=brace2
+z_Knee.brace2=brace2
+x_Knee.brace3=brace3
+y_Knee.brace3=brace3
+z_Knee.brace3=brace3
+%
+x_Knee.shoe1=shoe1
+y_Knee.shoe1=shoe1
+z_Knee.shoe1=shoe1
+x_Knee.shoe2=shoe2
+y_Knee.shoe2=shoe2
+z_Knee.shoe2=shoe2
+x_Knee.shoe3=shoe3
+y_Knee.shoe3=shoe3
+z_Knee.shoe3=shoe3
+%
+x_Knee.modification1=modification1
+y_Knee.modification1=modification1
+z_Knee.modification1=modification1
+x_Knee.modification2=modification2
+y_Knee.modification2=modification2
+z_Knee.modification2=modification2
+x_Knee.modification3=modification3
+y_Knee.modification3=modification3
+z_Knee.modification3=modification3
+%
+%% TIO
+x_TIO.brace1=brace1
+y_TIO.brace1=brace1
+z_TIO.brace1=brace1
+x_TIO.brace2=brace2
+y_TIO.brace2=brace2
+z_TIO.brace2=brace2
+x_TIO.brace3=brace3
+y_TIO.brace3=brace3
+z_TIO.brace3=brace3
+%
+x_TIO.shoe1=shoe1
+y_TIO.shoe1=shoe1
+z_TIO.shoe1=shoe1
+x_TIO.shoe2=shoe2
+y_TIO.shoe2=shoe2
+z_TIO.shoe2=shoe2
+x_TIO.shoe3=shoe3
+y_TIO.shoe3=shoe3
+z_TIO.shoe3=shoe3
+%
+x_TIO.modification1=modification1
+y_TIO.modification1=modification1
+z_TIO.modification1=modification1
+x_TIO.modification2=modification2
+y_TIO.modification2=modification2
+z_TIO.modification2=modification2
+x_TIO.modification3=modification3
+y_TIO.modification3=modification3
+z_TIO.modification3=modification3
+%
+%% Kinematic
+dt=0.01;
+m=1;
+Vx_Foot=
+Vy_Foot=
+Vz_Foot=
+a_Foot=
+a_Gz=
+a_Gy=
+R_FootAnkle=
+I_FootAnkle=
+%% Dynamic
+Fz=m*a_Gz;
+Fy=m*a_Gy;
+M_A=
+%% Input + Output 
+shoe1=...
+    [shoe1,Vx_Foot,Vy_Foot,Vz_Foot,a_Foot,a_Gz,a_Gy,R_FootAnkle,I_FootAnkle,Fz,Fy,M_A];
+shoe2=...
+    [shoe2,];
+shoe3=...
+    [shoe3,];
+brace1=...
+    [brace1,];
+brace2=...
+    [brace2,];
+brace3=...
+    [brace3,];
+modification1=...
+    [modification1,];
+modification2=...
+    [modification2,];
+modification3=...
+    [modification3,];
+%% questions
+questions=questdlg('Which one?','questions','Shoe','Brace','Modification','Shoe');
+switch questions
+case 'Shoe'
+questions=questdlg('Which one?','questions','Shoe1','Shoe2','Shoe3','Shoe1');  
+if questions=='Shoe1'
+    questions=shoe1;
+elseif questions=='Shoe2'
+    questions=shoe2;
+else
+    questions=shoe3;
+end   
+    case 'Brace'
+questions=questdlg('Which one?','questions','Brace1','Brace2','Brace3','Brace1');        
+if questions=='Brace1'
+    questions=brace1;
+elseif questions=='Brace2'
+    questions=brace2;
+else
+    questions=brace3;
+end    
+    case  'Modification'
+questions=questdlg('Which one?','questions','Modification1','Modification2','Modification3','Modification1');  
+if questions=='Modification1'
+    questions=modification1;
+elseif questions=='Modification2'
+    questions=modification2;
+else
+    questions=modification3;
+end
+end
+[Nx,Ny]=size(questions);
+trainNumber=0.7*Nx;
+trainNumber=round(trainNumber);
+testNumber=Nx-trainNumber;
+TrainInputs=Data(1:trainNumber,1:Ny-1);
+TrainTargets=Data(1:trainNumber,Ny);
+TestInputs=Data(testNumber:end,1:Ny-1);
+TestTargets=Data(testNumber:end,Ny);
+x1=TrainInputs;
+y1=TrainTargets;
+x2=TestInputs;
+y2=TestTargets;
+xy1=[x1,y1];
+xy2=[x2,y2];
+anfisedit
